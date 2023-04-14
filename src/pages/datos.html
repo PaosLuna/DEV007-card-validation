@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <title>Tarjeta de crédito válida</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+<!--BANNER-->
+    <header> PARAMORE </header>
+
+<!--TÍTULO-->    
+    <main class="cdmx"> 
+        <h1> CIUDAD DE MÉXICO <br> 
+            PALACIO DE LOS DEPORTES - 18 AGOSTO 2023</h1>
+    </main>      
+    
+<!--TARJETA DIGITAL-->
+<main class="container-tarjeta"> 
+    <section class="container-tarjeta_fondo">
+        <div class="tarjeta-frente">
+            <img class="pequeña" src="../images/tarjetapaola.png" alt="">
+            <p class="numero_falso">0000 0000 0000 0000</p>
+            <div class="datos-tarjeta">
+                <p class="datos-tarjeta-nombre">Nombre de la tarjeta</p>
+                <p><span class="datos-tarjeta-mes">00</span>/<span class="datos-tarjeta-año">00</span></p>
+            </div>
+        </div>
+    </section>
+
+<!--COMIENZA FORMULARIO-->
+    <section class="main-container_formulario">
+        <form action="" id="informacion-personal"> 
+<!--NOMBRE-->
+            <label for="nombre-cliente">Nombre de la tarjeta</label><br> 
+            <input class="form-input" type="text" name="nombreCard" id="nombre-cliente" placeholder="Escribe tu nombre"><br> <br>
+<!--TARJETA-->
+            <label for="tarjeta-cliente">Número de la tarjeta</label><br>
+            <input class="form-input" type="text" name="numeroCard" id="tarjeta-cliente" placeholder="XXXX XXXX XXXX XXXX" maxlength="19"><br><br>
+            <div class="error"></div>
+<!--FECHA-->
+            <label for="mes-cliente">Fecha de vencimiento</label><br>
+            <input class="form-input2" type="text" name="mesCard" id="mes-cliente" maxlength="2" placeholder="MM">
+            <input class="form-input2" type="text" name="añoCard" id="año-cliente" maxlength="2" placeholder="YY"><br> <br>
+<!--CVV-->
+            <label for="cvv-cliente">CVV</label><br> 
+            <input class="form-input2" type="text" name="cvvCard" id="cvv-cliente" placeholder="123" maxlength="3"><br><br>
+<!--BOTÓN COMPRAR-->
+            <button class="boton-comprar" type="button" id="comprar" onclick="infoCliente()">Comprar</button> 
+        </form>
+    </section>
+</main>
+
+<!--MENSAJE FINAL-->
+<section class="mensajeFinal">
+    <h1>Tu tarjeta ha sido validada</h1>
+    <button class="boton-continuar">Continuar</button>
+
+</section>
+
+<script src="../index.js"></script>    
+</body>
+</html>
