@@ -1,3 +1,7 @@
+//CODIGO CLONADO
+import validator from './validator.js';
+console.log(validator);
+
 //TRAER NOMBRE DE LA TARJETA
 let nombreCard = document.querySelector(".datos-tarjeta-nombre");
 let nombreInput = document.querySelector("#nombre-cliente");
@@ -20,6 +24,16 @@ let errorCard = document.querySelector(".error");
 
 //NÚMERO DE TARJETA 
 numeroInput.addEventListener('input', event=>{
+    event.preventDefault()
+
+var numero = document.getElementById("#tarjeta-cliente");
+var numeroCuenta = parseInt(numero);
+    
+console.log(typeof numero);
+console.log(typeof numeroCuenta);
+
+console.log(numero);
+console.log(numeroCuenta);
 
     let inputValue = event.target.value;
 
@@ -64,16 +78,25 @@ añoInput.addEventListener('input', ()=>{
 
 });
 
-//GUARDAR EL NÚMERO DE TARJETA EN LS
-function infoCliente() {
-    let tarjetaCliente = document.getElementById("tarjeta-cliente");
-    localStorage.setItem("cardCliente", tarjetaCliente.value);
-    console.log(localStorage.getItem("cardCliente"));
-}
 
-//CODIGO CLONADO
-//import validator from './validator.js';
-//console.log(validator);
+
+
+//GUARDAR EL NÚMERO DE TARJETA EN LS
+//function infoCliente() {
+//    let tarjetaCliente = document.getElementById("tarjeta-cliente");
+//    localStorage.setItem("cardCliente", tarjetaCliente.value);
+//    console.log(localStorage.getItem("cardCliente"));
+//}
+
+//CONVERTIR A UN ARRAY
+//function convertir() {
+//    var numero = document.getElementById(".tarjeta-cliente");
+//    var numeroCuenta = parseInt(numero);
+    
+//    console.log(numero);
+//    console.log(numeroCuenta);
+//}
+
 
 //INTENTO PARA QUITAR ESPACIOS
 //tarjeta-cliente.addEventListener("keyup",e=>{

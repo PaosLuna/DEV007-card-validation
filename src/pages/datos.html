@@ -7,6 +7,7 @@
 </head>
 
 <body>
+
 <!--BANNER-->
     <header> PARAMORE </header>
 
@@ -15,7 +16,8 @@
         <h1> CIUDAD DE MÉXICO <br> 
             PALACIO DE LOS DEPORTES - 18 AGOSTO 2023</h1>
     </main>      
-    
+
+<section class="cuadro-tarjeta">  
 <!--TARJETA DIGITAL-->
 <main class="container-tarjeta"> 
     <section class="container-tarjeta_fondo">
@@ -34,28 +36,36 @@
         <form action="" id="informacion-personal"> 
 <!--NOMBRE-->
             <label for="nombre-cliente">Nombre de la tarjeta</label><br> 
-            <input class="form-input" type="text" name="nombreCard" id="nombre-cliente" placeholder="Escribe tu nombre"><br> <br>
+            <input class="form-input" type="text" name="nombreCard" id="nombre-cliente" placeholder="Escribe tu nombre" required><br> <br>
 <!--TARJETA-->
             <label for="tarjeta-cliente">Número de la tarjeta</label><br>
-            <input class="form-input" type="text" name="numeroCard" id="tarjeta-cliente" placeholder="XXXX XXXX XXXX XXXX" maxlength="19"><br><br>
+            <input class="form-input" type="text" name="numeroCard[]" id="tarjeta-cliente" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" required><br><br>
             <div class="error"></div>
 <!--FECHA-->
             <label for="mes-cliente">Fecha de vencimiento</label><br>
-            <input class="form-input2" type="text" name="mesCard" id="mes-cliente" maxlength="2" placeholder="MM">
-            <input class="form-input2" type="text" name="añoCard" id="año-cliente" maxlength="2" placeholder="YY"><br> <br>
+            <input class="form-input2" type="text" name="mesCard" id="mes-cliente" maxlength="2" placeholder="MM" required>
+            <input class="form-input2" type="text" name="añoCard" id="año-cliente" maxlength="2" placeholder="YY" required><br> <br>
 <!--CVV-->
             <label for="cvv-cliente">CVV</label><br> 
-            <input class="form-input2" type="text" name="cvvCard" id="cvv-cliente" placeholder="123" maxlength="3"><br><br>
+            <input class="form-input2" type="text" name="cvvCard" id="cvv-cliente" placeholder="123" maxlength="3" required><br><br>
 <!--BOTÓN COMPRAR-->
-            <button class="boton-comprar" type="button" id="comprar" onclick="infoCliente()">Comprar</button> 
+            <button class="boton-comprar" type="button" id="comprar">Comprar</button> 
         </form>
     </section>
 </main>
+</section>  
+
+<!--onclick="infoCliente()"-->
 
 <!--MENSAJE FINAL-->
 <section class="mensajeFinal">
     <h1>Tu tarjeta ha sido validada</h1>
-    <button class="boton-continuar">Continuar</button>
+    
+    <!--<button class="boton-continuar">Continuar</button>-->
+
+    <button class="boton-continua" type="button" id="cambiar-pag">
+        <a href="../index.html">COMPRAR</a>
+    </button>   
 
 </section>
 
