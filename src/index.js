@@ -10,23 +10,21 @@ const comprar = document.getElementById("comprar");
 
 //GUARDAR EL NÚMERO DE TARJETA Y CONVERTIR EN ARRAY
 comprar.addEventListener("click", () => {
-    
   const tarjetaCliente = document.getElementById("tarjeta-cliente").value;
-  //validator.isValid(tarjetaCliente); //VIENE DE VALIDATOR.JS
+  
+  //LLAMAR DE VALIDATOR PARA ENMASCARAR 
+  const enmascarar = validator.maskify(tarjetaCliente)
+  console.log(enmascarar);
 
   //LLAMAR DE VALIDATOR PARA QUE DIGA SI ES VALIDA O NO   
-  algoritmoLuhn(tarjetaCliente)
-
-});
-
-function algoritmoLuhn(tarjetaCliente){     
   const resultado = validator.isValid(tarjetaCliente);    
   if (resultado === true){
     console.log("Tu tarjeta es valida");
   } else if (resultado === false) {
     console.log("Tu tarjeta es invalida");
   }
-}
+});
+
 
 
 

@@ -34,14 +34,13 @@ const validator = {
   },
 
   maskify:function(cardCliente){
-    
-    const enmascarar = cardCliente.length -4;
-    for (let i = 0; i <enmascarar.length; i++) {
-      cardCliente[i] = '#';
-      return enmascarar
-    }
-  }
-}
+    for (let i = 0; i <cardCliente.length; i++) {   
+      return cardCliente.slice(0, -4).replace(/./g, "#") + cardCliente.slice(-4);
+    } 
+  }  
+};
+
+
 
 export default validator;
 
