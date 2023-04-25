@@ -181,7 +181,7 @@ button {
   padding: 30px 30px 10px 30px;
   border-radius: 10px;
   position: relative;
-  top: -650px;
+  top: -680px;
   left: -200px;
   display: block;
   color: rgb(142, 139, 139);
@@ -221,7 +221,7 @@ button {
 /*DISEÑO TARJETA DIGITAL*/
 .container-tarjeta_fondo {
   position: relative;
-  top: -285px;
+  top: -350px;
   left: 250px;
 }
 
@@ -292,7 +292,6 @@ img.pequeña {
 }
 
 
-/*
 .logo-visa {
   position: relative;
   width: 60px;
@@ -305,7 +304,6 @@ img.pequeña {
 
 .logo-master {
   position: relative;
-  display: none;
   width: 70px;
   height: 40px;
   top: -262px;
@@ -316,11 +314,11 @@ img.pequeña {
 
 .logo-american {
   position: relative;
-  display: none;
   width: 70px;
   height: 50px;
   top: -262px;
   bottom: 0;
   right: 0;
   left: 270px;
-}
+}  
+

@@ -7,6 +7,14 @@ const numeroInput = document.querySelector("#tarjeta-cliente");
 //const errorCard = document.querySelector(".error");
 const comprar = document.getElementById("comprar");
 
+//LOGOS DEL BANCO
+const logoVisa = document.getElementById("logo-visa");
+const logoMaster = document.getElementById("logo-master");
+const logoAmerican = document.getElementById("logo-american");
+
+logoVisa.style.display = 'none';
+logoMaster.style.display = 'none';
+logoAmerican.style.display = 'none';
 
 //QUÉ SUCEDE AL INGRESAR EL NÚMERO EN EL INPUT
 numeroInput.addEventListener('input', event => {
@@ -32,13 +40,31 @@ numeroInput.addEventListener('input', event => {
   const numero = inputValue.slice(0, 2);
   console.log(numero);
   if (numero === "40"){
-    console.log("VISA");
+    //console.log("VISA");
+    visa();
   } if (numero === "34" || numero === "37") {
-    console.log("AMERICAN EXPRESS"); 
+    //console.log("AMERICAN EXPRESS"); 
+    master();
   } if (numero === "51" || numero === "55") {
-    console.log("MASTER CARD");
+    //console.log("MASTER CARD");
+    american();
   } 
 });
+
+//MOSTRAR LOGO BANCO
+function visa(){
+  logoVisa.style.display = 'block';
+}
+
+function master(){
+  logoMaster.style.display = 'block';
+}
+
+function american(){
+  logoAmerican.style.display = 'block';
+}
+
+
 
 
 
@@ -85,9 +111,6 @@ function abrirPopUpError(){
 cerrarPopUpError.addEventListener("click", () => {
   popUpError.close();
 })
-
-
-
 
 
 
@@ -147,14 +170,9 @@ const bancos = [
 
 
 //SACAR LOGO BANCO
+const logoBanco = document.getElementById('logo-banco');
 logoBanco.innerHTML = '';
     const imagen = document.createElement('img');
     imagen.src = "images\VISA.png";
     logoBanco.appendChild(imagen);*/
 
-/*const logoVisa = document.getElementsByClassName("logo-visa");
-  const logoMaster = document.getElementsByClassName("logo-master");
-  const logoAmerican = document.getElementsByClassName("logo-american");
-  logoVisa.style.display = 'none';
-  logoMaster.style.display = 'none';
-  logoAmerican.style.display = 'none';*/

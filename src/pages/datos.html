@@ -30,9 +30,9 @@
                         <p><span class="datos-tarjeta-mes">00</span>/<span class="datos-tarjeta-año">00</span></p>
                     </div>
                     <div class="logo-banco" id="logo-banco">
-                    <!--<img class="logo-visa" src="../images/VISA.png" alt="">
-                    <img class="logo-master" src="../images/MASTER-CARD.png" alt="">
-                    <img class="logo-american" src="../images/AMERICAN-EXPRESS.png" alt="">-->
+                    <img class="logo-visa" id="logo-visa" src="../images/VISA.png" alt="">
+                    <img class="logo-master" id="logo-master" src="../images/MASTER-CARD.png" alt="">
+                    <img class="logo-american" id="logo-american" src="../images/AMERICAN-EXPRESS.png" alt="">
                     </div>
                 </div>
             </section>
@@ -67,7 +67,7 @@
     <!--FECHA-->
                     <label for="mes-cliente">FECHA DE VENCIMIENTO</label><br>
                     <input class="form-input2" type="text" name="mesCard" id="mes-cliente" maxlength="2"
-                        placeholder="MM" required>
+                        placeholder="MM" max="12" required>
                     <input class="form-input2" type="text" name="añoCard" id="año-cliente" maxlength="2"
                         placeholder="YY" required><br>
     <!--CVV-->
