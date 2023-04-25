@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
- <head>
+
+<head>
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="../style.css" />
@@ -8,67 +9,80 @@
 
 <body>
 
-<!--BANNER-->
+    <!--BANNER-->
     <header> PARAMORE </header>
 
-<!--TÍTULO-->    
-    <main class="cdmx"> 
-        <h1> CIUDAD DE MÉXICO <br> 
+    <!--TÍTULO-->
+    <main class="cdmx">
+        <h1> CIUDAD DE MÉXICO <br>
             PALACIO DE LOS DEPORTES - 18 AGOSTO 2023</h1>
-    </main>      
+    </main>
 
-<section class="cuadro-tarjeta">  
-<!--TARJETA DIGITAL-->
-<main class="container-tarjeta"> 
-    <section class="container-tarjeta_fondo">
-        <div class="tarjeta-frente">
-            <img class="pequeña" src="../images/tarjetapaola.png" alt="">
-            <p class="numero_falso">0000 0000 0000 0000</p>
-            <div class="datos-tarjeta">
-                <p class="datos-tarjeta-nombre">Nombre de la tarjeta</p>
-                <p><span class="datos-tarjeta-mes">00</span>/<span class="datos-tarjeta-año">00</span></p>
-            </div>
-        </div>
-    </section>
+    <!--TARJETA DIGITAL-->
+    <section class="cuadro-tarjeta">
+        <!--<main class="container-tarjeta">-->
+            <section class="container-tarjeta_fondo">
+                <div class="tarjeta-frente">
+                    <img class="pequeña" src="../images/tarjetapaola.png" alt="">
+                    <p class="numero_falso">0000 0000 0000 0000</p>
+                    <div class="datos-tarjeta">
+                        <p class="datos-tarjeta-nombre">Nombre de la tarjeta</p>
+                        <p><span class="datos-tarjeta-mes">00</span>/<span class="datos-tarjeta-año">00</span></p>
+                    </div>
+                    <div class="logo-banco" id="logo-banco">
+                    <!--<img class="logo-visa" src="../images/VISA.png" alt="">
+                    <img class="logo-master" src="../images/MASTER-CARD.png" alt="">
+                    <img class="logo-american" src="../images/AMERICAN-EXPRESS.png" alt="">-->
+                    </div>
+                </div>
+            </section>
 
-<!--COMIENZA FORMULARIO-->
-    <section class="main-container_formulario">
-        <form action="" id="informacion-personal"> 
-<!--NOMBRE-->
-            <label for="nombre-cliente">Nombre de la tarjeta</label><br> 
-            <input class="form-input" type="text" name="nombreCard" id="nombre-cliente" placeholder="Escribe tu nombre" required><br> <br>
-<!--TARJETA-->
-            <label for="tarjeta-cliente">Número de la tarjeta</label><br>
-            <input class="form-input" type="text" name="numeroCard[]" id="tarjeta-cliente" placeholder="XXXX XXXX XXXX XXXX" maxlength="16" required><br><br>
-            <div class="error"></div>
-<!--FECHA-->
-            <label for="mes-cliente">Fecha de vencimiento</label><br>
-            <input class="form-input2" type="text" name="mesCard" id="mes-cliente" maxlength="2" placeholder="MM" required>
-            <input class="form-input2" type="text" name="añoCard" id="año-cliente" maxlength="2" placeholder="YY" required><br> <br>
-<!--CVV-->
-            <label for="cvv-cliente">CVV</label><br> 
-            <input class="form-input2" type="text" name="cvvCard" id="cvv-cliente" placeholder="123" maxlength="3" required><br><br>
-<!--BOTÓN COMPRAR-->
-            <button class="boton-comprar" type="button" id="comprar">Comprar</button> 
-        </form>
-    </section>
-</main>
-</section>  
-
-
-
-<!--MENSAJE FINAL-->
-<section class="mensajeFinal">
-    <h1>Tu tarjeta ha sido validada</h1>
+    <!--POP UP TARJETA VALIDA-->
+            <dialog id="popUp">
+                <h1>¡Ya tienes tus boletos!</h1><br>
+                <p>Tu pago ha sido procesado</p><br>
+                <button id="btn-cerrar-popUp">CONTINUAR</button>
+            </dialog>
     
-    <!--<button class="boton-continuar">Continuar</button>-->
+    <!--POP UP TARJETA INVALIDA-->
+            <dialog id="popUpError">
+              <h1>¡Oh uh!</h1><br>
+              <p>El número de tu tarjeta es invalido</p><br>
+              <button id="btn-cerrar-popUpError">VOLVER A INTENTAR</button>
+            </dialog>
 
-    <button class="boton-continua" type="button" id="cambiar-pag">
-        <a href="../index.html">COMPRAR</a>
-    </button>   
 
-</section>
+    <!--COMIENZA FORMULARIO-->
+            <section class="main-container_formulario">
+                <form action="" id="informacion-personal">
+    <!--NOMBRE-->
+                    <label for="nombre-cliente">NOMBRE DE TARJETA</label><br>
+                    <input class="form-input" type="text" name="nombreCard" id="nombre-cliente"
+                        placeholder="Escribe tu nombre" required><br> <br>
+    <!--TARJETA-->
+                    <label for="tarjeta-cliente">NÚMERO DE TARJETA</label><br>
+                    <input class="form-input" type="text" name="numeroCard[]" id="tarjeta-cliente"
+                        placeholder="XXXX XXXX XXXX XXXX" maxlength="16" required><br><br>
+                    <div class="error"></div>
+    <!--FECHA-->
+                    <label for="mes-cliente">FECHA DE VENCIMIENTO</label><br>
+                    <input class="form-input2" type="text" name="mesCard" id="mes-cliente" maxlength="2"
+                        placeholder="MM" required>
+                    <input class="form-input2" type="text" name="añoCard" id="año-cliente" maxlength="2"
+                        placeholder="YY" required><br>
+    <!--CVV-->
+                    <label for="cvv-cliente">CVV</label><br>
+                    <input class="form-input2" type="text" name="cvvCard" id="cvv-cliente" placeholder="123"
+                        maxlength="3" required><br>
+    <!--BOTÓN COMPRAR-->
+                    <button class="boton-comprar" type="button" id="comprar">COMPRAR</button>
+                </form>
+            </section>
+        </main>
+    </section>
 
-<script src="../index.js" type="module"></script>    
+
+    <script src="../index.js" type="module"></script>
 </body>
+
 </html>

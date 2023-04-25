@@ -33,10 +33,11 @@ const validator = {
     }      
   },
 
+  //FUNCIÓN MASKIFY
   maskify:function(cardCliente){
     for (let i = 0; i <cardCliente.length; i++) {   
       return cardCliente.slice(0, -4).replace(/./g, "#") + cardCliente.slice(-4);
-    } 
+    }   
   }  
 };
 
